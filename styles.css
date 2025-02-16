@@ -93,11 +93,11 @@ header {
   padding: 10px 5%;
 }
 
+/* Ajuste da ancoragem para compensar o cabeçalho fixo */
+section {
+  scroll-margin-top: 100px; /* Ajuste este valor conforme necessário */
+}
 
-/* Esconder o header superior ao rolar
-#top-header {
-  transition: transform 0.3s ease-in-out;
-} */
 
 .container-icon {
   display: flex;
@@ -301,7 +301,50 @@ nav ul li a:hover {
 #sobre {
   text-align: center;
   padding: 80px 5%;
-  background: #f5f5f5;
+  background: #00796b;
+  color: white;
+}
+
+.sobre, h2{
+  font-size: clamp(20px, 3vw, 50px);
+}
+
+.parceiro{
+  font-weight: 600;
+}
+.container-sobre {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 40px;
+  font-size: clamp(20px, 3vw, 25px);
+
+}
+
+.container-sobre > img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.container-sobre:nth-child(2) {
+  flex-direction: row-reverse;
+  margin-top: 40px;
+}
+
+.agendar{
+  background-color: #0ac7b1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.agendar,p{
+  font-size: clamp(20px, 2vw, 20px);
+}
+
+.agendar:hover{
+  background-color: #046158;
+  cursor: pointer;
+  transition: 1s;
 }
 
 /* Serviços */
@@ -428,11 +471,10 @@ footer {
 
 /* Exibe o menu hambúrguer e oculta o tradicional no mobile */
 @media (max-width: 768px) {
-  .contact-info{
+  .contact-info {
     justify-content: center;
-
   }
-  #top-header{
+  #top-header {
     justify-content: center;
   }
   .menu {
@@ -465,7 +507,6 @@ footer {
   .text {
     bottom: 10%; /* Aumenta a distância do texto em relação aos dots */
   }
-
 }
 
 /* Estiliza o menu hambúrguer */
