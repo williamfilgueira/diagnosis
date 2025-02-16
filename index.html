@@ -25,30 +25,36 @@
       </div>
       <!-- Cabeçalho Principal -->
       <header id="main-header">
-        <div class="logo">
-          <img
-            class="img-Logo"
-            src="imgs/logo-diagnosis.png"
-            alt="Veterinário cuidando de um pet"
+        <div class="container-menu">
+          <div class="logo">
+            <img
+              class="img-Logo"
+              src="imgs/logo-diagnosis.png"
+              alt="Veterinário cuidando de um pet"
+            />
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="#inicio" class="active">Início</a></li>
+              <li><a href="#sobre">Sobre Nós</a></li>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#equipe">Equipe</a></li>
+              <li><a href="#depoimentos">Depoimentos</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+            <!-- Botão do menu hambúrguer -->
+          </nav>
+          <!-- Botão do menu hambúrguer -->
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu"
+            role="button"
+            aria-label="Abrir o menu"
+            onkeydown="handleKeyPress(event)"
           />
         </div>
-          <!-- Botão do menu hambúrguer -->
-          <input type="checkbox" id="menu-toggle" class="menu" 
-          role="button" 
-          aria-label="Abrir o menu"
-          onkeydown="handleKeyPress(event)">
-          
-        <nav>
-          <ul>
-            <li><a href="#inicio" class="active">Início</a></li>
-            <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-          <!-- Botão do menu hambúrguer -->
-        </nav>
       </header>
     </div>
 

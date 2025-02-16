@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  max-width: 100%;
 }
 
 /* Estilo geral */
@@ -140,7 +141,6 @@ nav ul li a:hover {
 
 /* Ajuste do Carrossel */
 .hero {
-  
   width: 100vw; /* Faz a seção ocupar toda a largura da tela */
   overflow: hidden;
 }
@@ -190,7 +190,6 @@ nav ul li a:hover {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  
 }
 
 .dot {
@@ -247,7 +246,7 @@ nav ul li a:hover {
   border-radius: 8px;
   padding: 20px;
   width: 250px; /* Define um tamanho fixo para manter quadrado */
-  height: 250px; 
+  height: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -359,7 +358,6 @@ footer {
   padding: 20px;
 }
 
-
 /* Quando a tela for menor, reduzir os headers */
 @media (max-width: 1024px) {
   #top-header {
@@ -377,10 +375,72 @@ footer {
   }
 }
 
-/* MENU HAMBÚRGUER */
+.container-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/* Oculta o menu hambúrguer no desktop */
+@media (min-width: 769px) {
+  .menu {
+    display: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav ul {
+    display: flex !important; /* Garante que os itens do menu tradicional fiquem visíveis */
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+}
+
+/* Exibe o menu hambúrguer e oculta o tradicional no mobile */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu tradicional */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  /* Exibe o menu quando o input checkbox está marcado */
+  #menu-toggle:checked + nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Estiliza o menu hambúrguer */
 .menu {
-  --s: 40px; /* Tamanho do botão */
-  --c: #1a3d5f; /* Cor do ícone */
+  --s: 30px; /* Tamanho do botão */
+  --c: #00796b; /* Cor do ícone */
   
   height: var(--s);
   aspect-ratio: 1;
@@ -402,15 +462,14 @@ footer {
     40% 100%;
   position: relative;
   clip-path: inset(0 25%);
-  -webkit-mask: linear-gradient(90deg, transparent, #000 25% 75%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, black 25% 75%, transparent);
   cursor: pointer;
   transition: 
     background-position .3s var(--_s,.3s), 
     clip-path 0s var(--_s,.6s);
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  display: none; /* Escondido por padrão */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .menu:before,
@@ -443,50 +502,4 @@ footer {
   border: none;
   outline: 2px solid var(--c);
   outline-offset: 5px;
-}
-
-/* MENU RESPONSIVO */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-/* Oculta o menu tradicional e exibe o hambúrguer em telas pequenas */
-@media (max-width: 768px) {
-  .header{
-    width: 100%;
-  }
-  .menu {
-    background-color: red;
-    display: block; /* Exibe o menu hambúrguer */
-  }
-
-  nav ul {
-    display: none; /* Esconde o menu tradicional */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    text-align: center;
-  }
-
-  /* Exibe o menu quando o input checkbox está marcado */
-  .menu:checked + nav ul {
-    display: flex;
-  }
-
-  nav ul li {
-    margin-bottom: 10px;
-  }
-
-  .container-menu-hambuerguer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }

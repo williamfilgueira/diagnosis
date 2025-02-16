@@ -56,24 +56,29 @@ window.addEventListener("scroll", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
-    const menuList = document.getElementById("menu-list");
+    const menuList = document.querySelector("nav ul");
 
-    menuToggle.addEventListener("click", function () {
-        menuList.classList.toggle("show");
+    menuToggle.addEventListener("change", function () {
+        if (this.checked) {
+            menuList.style.display = "flex"; // Mostra o menu no mobile
+        } else {
+            menuList.style.display = "none"; // Esconde o menu no mobile
+        }
     });
 
-    // Esconder menu ao clicar em um link
+    // Esconder menu ao clicar em um link (melhor UX)
     menuList.addEventListener("click", function () {
-        menuList.classList.remove("show");
+        menuList.style.display = "none";
+        menuToggle.checked = false;
     });
 });
 
-
+// Acessibilidade: Teclado para abrir o menu (Enter ou Espaço)
 function handleKeyPress(event) {
     const menuToggle = document.getElementById("menu-toggle");
 
-    if (event.key === "Enter" || event.key === " ") { // Verifica se foi pressionado "Enter" ou "Espaço"
-        event.preventDefault(); // Evita que a página role ao pressionar "Espaço"
-        menuToggle.checked = !menuToggle.checked; // Alterna o estado do menu
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        menuToggle.checked = !menuToggle.checked;
     }
 }
