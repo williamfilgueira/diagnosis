@@ -29,12 +29,14 @@ body {
   background: #009688;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   font-size: 14px;
   width: 100%;
   transition: all 0.3s ease-in-out;
+  gap: 10px;
 }
 
 /* Esconder completamente o top-header ao rolar */
@@ -42,8 +44,11 @@ body {
   display: none !important;
 }
 
-.contact-info span {
-  margin-right: 15px;
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
 }
 
 .contact-info a {
@@ -88,9 +93,21 @@ header {
   padding: 10px 5%;
 }
 
-/* Esconder o header superior ao rolar */
+
+/* Esconder o header superior ao rolar
 #top-header {
   transition: transform 0.3s ease-in-out;
+} */
+
+.container-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Quando a página é rolada, o top-header desaparece */
@@ -386,7 +403,6 @@ footer {
   width: 100%;
 }
 
-
 /* Oculta o menu hambúrguer no desktop */
 @media (min-width: 769px) {
   .menu {
@@ -412,6 +428,13 @@ footer {
 
 /* Exibe o menu hambúrguer e oculta o tradicional no mobile */
 @media (max-width: 768px) {
+  .contact-info{
+    justify-content: center;
+
+  }
+  #top-header{
+    justify-content: center;
+  }
   .menu {
     display: block;
     cursor: pointer;
@@ -444,32 +467,32 @@ footer {
 .menu {
   --s: 30px; /* Tamanho do botão */
   --c: #00796b; /* Cor do ícone */
-  
+
   height: var(--s);
   aspect-ratio: 1;
   border: none;
   padding: 0;
-  border-inline: calc(var(--s)/2) solid transparent; 
+  border-inline: calc(var(--s) / 2) solid transparent;
   box-sizing: content-box;
-  --_g1: linear-gradient(var(--c) 20%, transparent 0 80%, var(--c) 0) 
-         no-repeat content-box border-box;
-  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, transparent) 
-         repeat-y content-box border-box;
-  background: 
-    var(--_g2) left  var(--_p,0px) top,
-    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
-    var(--_g2) right var(--_p,0px) top,
-    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
-  background-size: 
-    20% 80%,
-    40% 100%;
+  --_g1: linear-gradient(var(--c) 20%, transparent 0 80%, var(--c) 0) no-repeat
+    content-box border-box;
+  --_g2: radial-gradient(
+      circle closest-side at 50% 12.5%,
+      var(--c) 95%,
+      transparent
+    )
+    repeat-y content-box border-box;
+  background: var(--_g2) left var(--_p, 0px) top,
+    var(--_g1) left calc(var(--s) / 10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top,
+    var(--_g1) right calc(var(--s) / 10 + var(--_p, 0px)) top;
+  background-size: 20% 80%, 40% 100%;
   position: relative;
   clip-path: inset(0 25%);
   -webkit-mask: linear-gradient(90deg, transparent, black 25% 75%, transparent);
   cursor: pointer;
-  transition: 
-    background-position .3s var(--_s,.3s), 
-    clip-path 0s var(--_s,.6s);
+  transition: background-position 0.3s var(--_s, 0.3s),
+    clip-path 0s var(--_s, 0.6s);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -482,7 +505,7 @@ footer {
   border-radius: var(--s);
   inset: 40% 0;
   background: var(--c);
-  transition: transform .3s calc(.3s - var(--_s,.3s));
+  transition: transform 0.3s calc(0.3s - var(--_s, 0.3s));
 }
 
 .menu:checked {
