@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagnosis - Clínica Veterinária</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <!-- Header Superior com Contatos -->
+      <div id="top-header">
+        <div class="contact-info">
+          <span>📞 (021) 2642 2886</span>| <span>📱 (021) 986 062886</span>|
+          <span
+            >✉️
+            <a href="mailto:diagnosisvet@gmail.com"
+              >diagnosisvet@gmail.com</a
+            ></span
+          >
+        </div>
+        <div class="partner-info">
+          <a href="#">TERRADIOLOGIA, SEJA NOSSO PARCEIRO</a>
+        </div>
+      </div>
+      <!-- Cabeçalho Principal -->
+      <header id="main-header">
+        <div class="logo">
+          <img
+            class="img-Logo"
+            src="imgs/logo-diagnosis.png"
+            alt="Veterinário cuidando de um pet"
+          />
+        </div>
+          <!-- Botão do menu hambúrguer -->
+          <input type="checkbox" id="menu-toggle" class="menu" 
+          role="button" 
+          aria-label="Abrir o menu"
+          onkeydown="handleKeyPress(event)">
+          
+        <nav>
+          <ul>
+            <li><a href="#inicio" class="active">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+          <!-- Botão do menu hambúrguer -->
+        </nav>
+      </header>
+    </div>
+
+    <!-- Seção Hero com Carrossel -->
+    <section id="inicio" class="hero">
+      <div class="carousel">
+        <div class="slides">
+          <div class="slide">
+            <img src="imgs/diagnostico" alt="Veterinário cuidando de um pet" />
+            <div class="text">
+              <h1>Cuidamos do seu pet com amor e excelência!</h1>
+              <p>
+                Agende uma consulta e ofereça o melhor para o seu amigo de
+                quatro patas.
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imgs/diagnostico2.jpg" alt="Consulta veterinária" />
+            <div class="text">
+              <h1>Equipamentos modernos para diagnóstico</h1>
+              <p>Realizamos exames com tecnologia de ponta.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="imgs/diagnostico3.webp" alt="Cachorro sendo vacinado" />
+            <div class="text">
+              <h1>Vacinação e prevenção</h1>
+              <p>Seu pet protegido com os melhores cuidados.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicadores Acessíveis -->
+        <div class="carousel-indicators">
+          <button
+            class="dot active"
+            aria-label="Ir para o slide 1"
+            onclick="moveToSlide(0)"
+          ></button>
+          <button
+            class="dot"
+            aria-label="Ir para o slide 2"
+            onclick="moveToSlide(1)"
+          ></button>
+          <button
+            class="dot"
+            aria-label="Ir para o slide 3"
+            onclick="moveToSlide(2)"
+          ></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Serviços Especiais -->
+    <section id="servicos-especiais">
+      <h2>Nossos Serviços Especializados</h2>
+      <div class="servicos-container">
+        <div class="servico-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2921/2921822.png"
+            alt="Ícone de Radiologia"
+          />
+          <div class="card-text">
+            <h3>Radiologia.</h3>
+            <p>Exames simples e contrastados</p>
+            <p>Laudos para Displasia Coxofemoral e Cotovelo</p>
+            <p>Telerradiologia</p>
+          </div>
+        </div>
+
+        <div class="servico-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2913/2913969.png"
+            alt="Ícone de Reprodução Assistida"
+          />
+          <div class="card-text">
+            <h3>Reprodução Assistida.</h3>
+            <p>Inseminação artificial</p>
+            <p>Resfriamento e congelamento de sêmen</p>
+            <p>Banco de sêmen</p>
+            <p>Tratamento da infertilidade</p>
+          </div>
+        </div>
+
+        <div class="servico-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/3620/3620386.png"
+            alt="Ícone de Oncologia"
+          />
+          <div class="card-text">
+            <h3>Oncologia.</h3>
+            <p>Tratamentos oncológicos especializados</p>
+          </div>
+        </div>
+
+        <div class="servico-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2809/2809717.png"
+            alt="Ícone de Cardiologia"
+          />
+          <div class="card-text">
+            <h3>Cardiologia.</h3>
+            <p>Ecocardiograma</p>
+            <p>Eletrocardiograma</p>
+            <p>Consultas cardiológicas</p>
+          </div>
+        </div>
+
+        <div class="servico-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/3017/3017434.png"
+            alt="Ícone de Ultrassonografia"
+          />
+          <div class="card-text">
+            <h3>Ultrassonografia.</h3>
+            <p>Abdominal, Articular, Cervical</p>
+            <p>Gestacional</p>
+            <p>Doppler colorido</p>
+            <p>Intervencionista</p>
+          </div>
+        </div>
+
+        <div class="servico-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/3888/3888596.png"
+            alt="Ícone de Endoscopia"
+          />
+          <div class="card-text">
+            <h3>Endoscopia.</h3>
+            <p>Digestiva alta</p>
+            <p>Colonoscopia</p>
+            <p>Rinoscopia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre">
+      <h2>Sobre a Diagnosis</h2>
+      <p>
+        Somos uma clínica veterinária dedicada ao bem-estar do seu pet, com
+        atendimento humanizado e tecnologia avançada.
+      </p>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+      <h2>Nossos Serviços</h2>
+      <div class="servicos-grid">
+        <div class="servico-item">
+          <h3>Consultas Veterinárias</h3>
+          <p>Avaliação completa para garantir a saúde do seu pet.</p>
+        </div>
+        <div class="servico-item">
+          <h3>Vacinação</h3>
+          <p>Proteja seu pet contra doenças com vacinas atualizadas.</p>
+        </div>
+        <div class="servico-item">
+          <h3>Banho e Tosa</h3>
+          <p>Deixe seu pet limpo e bem cuidado com nossos especialistas.</p>
+        </div>
+        <div class="servico-item">
+          <h3>Exames Laboratoriais</h3>
+          <p>Diagnóstico preciso para garantir a melhor saúde do seu animal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipe -->
+    <section id="equipe">
+      <h2>Conheça Nossa Equipe</h2>
+      <p>
+        Nossos profissionais são especialistas e apaixonados por cuidar do seu
+        pet.
+      </p>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+      <h2>O que nossos clientes dizem</h2>
+      <blockquote>
+        "A Diagnosis salvou a vida do meu cachorro! Atendimento excelente!" -
+        Maria S.
+      </blockquote>
+    </section>
+
+    <!-- Agendamento -->
+    <section id="agendamento">
+      <h2>Agende uma Consulta</h2>
+      <form>
+        <input type="text" placeholder="Nome" required />
+        <input type="tel" placeholder="Telefone" required />
+        <select>
+          <option>Escolha um serviço</option>
+          <option>Consulta Veterinária</option>
+          <option>Vacinação</option>
+          <option>Banho e Tosa</option>
+          <option>Exames</option>
+        </select>
+        <button type="submit">Agendar Agora</button>
+      </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>
+        © 2025 Diagnosis - Clínica Veterinária | Todos os direitos reservados.
+      </p>
+      <p>Contato: (11) 99999-9999 | Endereço: Rua Exemplo, 123</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
