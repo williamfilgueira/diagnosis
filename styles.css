@@ -117,13 +117,13 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #1a3d5f;
+  color: #04534b;
   font-weight: bold;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #009688; /* Verde destaque */
+  color: #02a595; /* Verde destaque */
 }
 
 .btn {
@@ -164,22 +164,24 @@ nav ul li a:hover {
 }
 
 .slide img {
-  width: 100vw; /* Ocupa toda a largura da tela */
-  height: 83vh; /* Altura ajustável conforme necessário */
-  object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100vh; /* Altura ajustável conforme necessário */
+  object-fit: fill; /* Garante que a imagem cubra todo o espaço */
 }
 
 .text {
+  font-size: 20px;
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: #00968759;
   color: white;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
-  max-width: 80%;
+  max-width: 90%;
+  width: 650px;
 }
 
 /* Estilos dos indicadores botão */
@@ -195,10 +197,11 @@ nav ul li a:hover {
 .dot {
   width: 12px;
   height: 12px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #00968759;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: none;
 }
 
 .dot.active {
