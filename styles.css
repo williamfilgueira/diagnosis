@@ -183,22 +183,22 @@ nav ul li a:hover {
 .slide img {
   width: 100%; /* Ocupa toda a largura da tela */
   height: 100vh; /* Altura ajustável conforme necessário */
-  object-fit: fill; /* Garante que a imagem cubra todo o espaço */
+  object-fit: inherit; /* Garante que a imagem cubra todo o espaço */
 }
 
 .text {
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 20px); /* Define um tamanho dinâmico da fonte */
   position: absolute;
-  bottom: 20%;
+  bottom: 10%; /* Mantém uma posição fixa */
   left: 50%;
   transform: translateX(-50%);
-  background: #00968759;
+  background: rgba(0, 150, 135, 0.6);
   color: white;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
   max-width: 90%;
-  width: 650px;
+  width: clamp(250px, 50vw, 650px);
 }
 
 /* Estilos dos indicadores botão */
@@ -461,6 +461,11 @@ footer {
   nav ul li {
     margin-bottom: 10px;
   }
+
+  .text {
+    bottom: 10%; /* Aumenta a distância do texto em relação aos dots */
+  }
+
 }
 
 /* Estiliza o menu hambúrguer */
