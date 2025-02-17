@@ -98,7 +98,6 @@ section {
   scroll-margin-top: 100px; /* Ajuste este valor conforme necessário */
 }
 
-
 .container-icon {
   display: flex;
   align-items: center;
@@ -305,25 +304,29 @@ nav ul li a:hover {
   color: white;
 }
 
-.sobre, h2{
+.sobre,
+h2 {
   font-size: clamp(20px, 3vw, 50px);
 }
 
-.parceiro{
+.parceiro {
   font-weight: 600;
 }
 .container-sobre {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-top: 20px;
   gap: 40px;
   font-size: clamp(20px, 3vw, 25px);
-
 }
 
-.container-sobre > img {
-  width: 250px;
+.container-sobre img {
+  max-width: 100%; /* Garante que a imagem nunca ultrapasse o contêiner */
+  width: clamp(200px, 30%, 300px); /* Define um tamanho flexível */
+  height: auto; /* Mantém a proporção da imagem */
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .container-sobre:nth-child(2) {
@@ -331,17 +334,18 @@ nav ul li a:hover {
   margin-top: 40px;
 }
 
-.agendar{
+.agendar {
   background-color: #0ac7b1;
   border-radius: 10px;
   padding: 10px;
 }
 
-.agendar,p{
+.agendar,
+p {
   font-size: clamp(20px, 2vw, 20px);
 }
 
-.agendar:hover{
+.agendar:hover {
   background-color: #046158;
   cursor: pointer;
   transition: 1s;
@@ -415,10 +419,49 @@ form button:hover {
 
 /* Rodapé */
 footer {
-  background: #1a3d5f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  background: #00796b;
   color: #fff;
-  text-align: center;
   padding: 20px;
+  gap: 50px;
+}
+
+.container-footer {
+  padding-top: 90px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.container-footer p {
+  font-size: clamp(10px, 2vw, 15px);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 20px;
+}
+
+.redes-sociais img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-footer img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
 }
 
 /* Quando a tela for menor, reduzir os headers */
@@ -506,6 +549,21 @@ footer {
 
   .text {
     bottom: 10%; /* Aumenta a distância do texto em relação aos dots */
+  }
+}
+
+@media (max-width: 540px) {
+  .container-sobre {
+    flex-wrap: wrap;
+  }
+  
+  .servico-card,h3,p{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 }
 
