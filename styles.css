@@ -121,7 +121,7 @@ section {
 }
 
 .img-Logo {
-  width: 120px; 
+  width: 120px;
   height: auto;
 }
 
@@ -229,7 +229,7 @@ nav ul li a:hover {
 /* Responsividade */
 @media (max-width: 768px) {
   .slide img {
-    height: 50vh;
+    height: 90vh;
   }
 
   .text {
@@ -255,17 +255,20 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .servico-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background: #f9f9f9;
   border-radius: 8px;
   padding: 20px;
-  width: 250px;
-  height: 250px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  min-height: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -277,23 +280,40 @@ nav ul li a:hover {
 .servico-card img {
   width: 60px;
   height: 60px;
-  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 .card-text {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-grow: 1; /* Faz o texto ocupar o espaço restante */
 }
 
 .card-text h3 {
   font-size: 1.2em;
   margin: 0 0 5px;
   font-weight: bold;
+  color: #00796b;
 }
 
 .card-text p {
   font-size: 0.9em;
-  color: #555;
+  color: #00796b;
   margin: 3px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .servicos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servico-card {
+    width: 90%; /* Ocupa quase toda a largura da tela */
+    min-height: auto; /* Permite ajuste dinâmico */
+  }
 }
 
 /* Sobre a clínica */
@@ -342,6 +362,10 @@ nav ul li a:hover {
 .agendar p {
   font-size: clamp(20px, 2vw, 20px);
   color: white;
+}
+
+.agendar a {
+  text-decoration: none;
 }
 
 .agendar:hover {
@@ -752,9 +776,9 @@ footer {
 }
 
 .logo-footer img {
-  width: 100%; 
-  max-width: 280px; 
-  height: auto; 
+  width: 100%;
+  max-width: 280px;
+  height: auto;
   object-fit: contain;
 }
 
