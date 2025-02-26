@@ -314,8 +314,6 @@ nav ul li a:hover {
     width: 90%; /* Ocupa quase toda a largura da tela */
     min-height: auto; /* Permite ajuste dinâmico */
   }
-
-
 }
 
 /* Sobre a clínica */
@@ -699,31 +697,78 @@ h2 {
   margin: 0 auto;
 }
 
-/* Agendamento */
-#agendamento {
+.container-aviso p {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #00796b;
+}
+
+#aviso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 80px 5%;
+  height: 120px;
+  flex-direction: column;
+  position: relative;
+  margin: 50px;
 }
 
-form input,
-form select,
-form button {
-  width: 80%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
+/* Seta animada */
+.seta-animada {
+  position: absolute;
+  bottom: -100px; 
+  left: calc(50% - 60px); 
+  animation: pulo 1s infinite ease-in-out;
 }
 
-form button {
-  background: #009688;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+.seta-animada img {
+  width: 120px; 
+  max-width: 100%;
 }
 
-form button:hover {
-  background: #00796b;
+/* Animação para a seta */
+@keyframes pulo {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-15deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-15deg);
+  }
+}
+
+/* 📱 Responsividade para telas menores */
+@media (max-width: 768px) {
+  .seta-animada {
+    bottom: -90px; 
+    left: calc(50% - 50px); 
+  }
+
+  .seta-animada img {
+    width: 100px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .seta-animada {
+    bottom: -100px;
+    left: calc(50% - 40px);
+  }
+
+  .seta-animada img {
+    width: 100px; 
+  }
+}
+
+@media (max-width: 390px) {
+  .container-aviso {
+   margin-bottom: 20px;
+  }
+  .seta-animada img {
+  width: 80px;
+  }
+
 }
 
 /* Rodapé */
@@ -832,7 +877,6 @@ footer {
   }
 
   /* Ajuste da ancoragem para compensar o cabeçalho fixo */
-
 }
 
 /* Exibe o menu hambúrguer e oculta o tradicional no mobile */
@@ -875,6 +919,12 @@ footer {
   }
   section {
     scroll-margin-top: 79px;
+  }
+}
+@media (max-width: 557px) {
+  .info {
+    text-align: center;
+    justify-content: center;
   }
 }
 
