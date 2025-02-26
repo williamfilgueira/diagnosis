@@ -314,6 +314,8 @@ nav ul li a:hover {
     width: 90%; /* Ocupa quase toda a largura da tela */
     min-height: auto; /* Permite ajuste dinâmico */
   }
+
+
 }
 
 /* Sobre a clínica */
@@ -828,6 +830,9 @@ footer {
   nav ul li {
     display: inline-block;
   }
+
+  /* Ajuste da ancoragem para compensar o cabeçalho fixo */
+
 }
 
 /* Exibe o menu hambúrguer e oculta o tradicional no mobile */
@@ -867,6 +872,9 @@ footer {
 
   .text {
     bottom: 10%; /* Aumenta a distância do texto em relação aos dots */
+  }
+  section {
+    scroll-margin-top: 79px;
   }
 }
 
