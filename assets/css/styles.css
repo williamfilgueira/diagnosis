@@ -125,6 +125,21 @@ section {
   height: auto;
 }
 
+nav ul li:nth-child(7) a {
+  background-color: #03a895;  
+  color: white; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  font-weight: bold; 
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Efeito de hover para melhor experiência do usuário */
+nav ul li:nth-child(7) a:hover {
+  background-color: #028577;
+  color: white; 
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -262,7 +277,8 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; 
+  text-align: center;
   background: #f9f9f9;
   border-radius: 8px;
   padding: 20px;
@@ -286,8 +302,10 @@ nav ul li a:hover {
 .card-text {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  flex-grow: 1; /* Faz o texto ocupar o espaço restante */
+  align-items: center; 
+  justify-content: center; 
+  flex-grow: 0; 
+  width: 100%;
 }
 
 .card-text h3 {
@@ -311,8 +329,8 @@ nav ul li a:hover {
   }
 
   .servico-card {
-    width: 90%; /* Ocupa quase toda a largura da tela */
-    min-height: auto; /* Permite ajuste dinâmico */
+    width: 90%; 
+    min-height: auto; 
   }
 }
 
@@ -366,6 +384,7 @@ nav ul li a:hover {
 
 .agendar a {
   text-decoration: none;
+  color: white;
 }
 
 .agendar:hover {
@@ -717,13 +736,13 @@ h2 {
 /* Seta animada */
 .seta-animada {
   position: absolute;
-  bottom: -100px; 
-  left: calc(50% - 60px); 
+  bottom: -100px;
+  left: calc(50% - 60px);
   animation: pulo 1s infinite ease-in-out;
 }
 
 .seta-animada img {
-  width: 120px; 
+  width: 120px;
   max-width: 100%;
 }
 
@@ -741,12 +760,12 @@ h2 {
 /* 📱 Responsividade para telas menores */
 @media (max-width: 768px) {
   .seta-animada {
-    bottom: -90px; 
-    left: calc(50% - 50px); 
+    bottom: -90px;
+    left: calc(50% - 50px);
   }
 
   .seta-animada img {
-    width: 100px; 
+    width: 100px;
   }
 }
 
@@ -757,18 +776,17 @@ h2 {
   }
 
   .seta-animada img {
-    width: 100px; 
+    width: 100px;
   }
 }
 
 @media (max-width: 390px) {
   .container-aviso {
-   margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   .seta-animada img {
-  width: 80px;
+    width: 80px;
   }
-
 }
 
 /* Rodapé */
@@ -876,7 +894,7 @@ footer {
     display: inline-block;
   }
 
-  /* Ajuste da ancoragem para compensar o cabeçalho fixo */
+  
 }
 
 /* Exibe o menu hambúrguer e oculta o tradicional no mobile */
