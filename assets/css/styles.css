@@ -125,7 +125,7 @@ section {
   height: auto;
 }
 
-nav ul li:nth-child(7) a {
+nav ul li:nth-child(6) a {
   background-color: #03a895;  
   color: white; 
   padding: 10px 15px; 
@@ -135,7 +135,7 @@ nav ul li:nth-child(7) a {
 }
 
 /* Efeito de hover para melhor experiência do usuário */
-nav ul li:nth-child(7) a:hover {
+nav ul li:nth-child(6) a:hover {
   background-color: #028577;
   color: white; 
 }
