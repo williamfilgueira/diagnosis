@@ -334,11 +334,69 @@ nav ul li a:hover {
   }
 }
 
+/* Configuração geral da seção */
+.parallax-section {
+  margin-top: 200px;
+  position: relative;
+  width: 100%;
+  height: 450px; /* Ajuste conforme necessário */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: url('../imgs/entrada2.jpeg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Aqui está o efeito parallax */
+}
+
+/* Estilização do conteúdo */
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: linear-gradient(180deg, #04b49fa9, #204d47ab); /* Leve fundo escuro para melhorar a legibilidade */
+}
+
+/* Título e Texto */
+.parallax-content h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.parallax-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Botão de ação */
+.cta-button {
+  background: #03a895;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #03463e;
+}
+
+
 /* Sobre a clínica */
 #sobre {
   text-align: center;
   padding: 80px 5%;
-  background: linear-gradient(180deg, #03a895, #204d47);
+  background: linear-gradient(180deg, #03a895, #11695e);
   color: white;
 }
 
@@ -617,6 +675,19 @@ h2 {
   margin-right: auto;
 }
 
+#depoimentos {
+  padding: 80px 5%;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+#depoimentos h2 {
+  font-size: 2.5em;
+  color: #00796b;
+  margin-bottom: 50px;
+}
+
+
 /* Depoimentos */
 #depoimentos {
   padding: 80px 5%;
@@ -681,6 +752,7 @@ h2 {
   object-fit: fill;
   border: 3px solid white;
 }
+
 
 /* mapa */
 .mapa-container {
@@ -796,7 +868,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #00796b;
+  background: linear-gradient(180deg, #03a895, #204d47);
   color: #fff;
   padding: 20px;
   gap: 50px;

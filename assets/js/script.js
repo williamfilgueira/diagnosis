@@ -82,3 +82,13 @@ function handleKeyPress(event) {
         menuToggle.checked = !menuToggle.checked;
     }
 }
+
+
+document.querySelector(".next-btn").addEventListener("click", () => {
+    document.querySelector(".carousel-container").scrollBy({ left: 300, behavior: "smooth" });
+  });
+  
+  document.querySelector(".prev-btn").addEventListener("click", () => {
+    document.querySelector(".carousel-container").scrollBy({ left: -300, behavior: "smooth" });
+  });
+  
