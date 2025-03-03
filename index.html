@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Diagnosis - Clínica Veterinária especializada em diagnóstico por imagem para pets."
+    />
     <title>Diagnosis - Clínica Veterinária</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
@@ -13,18 +19,26 @@
             <img
               class="icon"
               src="assets/imgs/telefone.png"
-              alt="telefone da cliníca"
+              alt="Ícone de telefone seguido pelo número da clínica"
             />
             (021) 2642 2886
           </div>
           |
           <div class="container-icon">
-            <img class="icon" src="assets/imgs/sms.png" alt="celular da cliníca" />
+            <img
+              class="icon"
+              src="assets/imgs/sms.png"
+              alt="celular da cliníca"
+            />
             (021) 986 062886
           </div>
           |
           <div class="container-icon">
-            <img class="icon" src="assets/imgs/o-email.png" alt="celular da cliníca" />
+            <img
+              class="icon"
+              src="assets/imgs/o-email.png"
+              alt="celular da cliníca"
+            />
             <a href="mailto:diagnosisvet@gmail.com">diagnosisvet@gmail.com</a>
           </div>
         </div>
@@ -50,19 +64,20 @@
               <li><a href="#servicos">Serviços</a></li>
               <li><a href="#equipe">Equipe</a></li>
               <li><a href="pages/contato.html">Contato</a></li>
-              <li ><a href="#contato">Laudos</a></li>
+              <li><a href="#linkLaudos">Laudos</a></li>
             </ul>
             <!-- Botão do menu hambúrguer -->
+            <input
+              type="checkbox"
+              id="menu-toggle"
+              class="menu"
+              role="button"
+              aria-label="Abrir o menu"
+              onkeydown="handleKeyPress(event)"
+            />
           </nav>
           <!-- Botão do menu hambúrguer -->
-          <input
-            type="checkbox"
-            id="menu-toggle"
-            class="menu"
-            role="button"
-            aria-label="Abrir o menu"
-            onkeydown="handleKeyPress(event)"
-          />
+
         </div>
       </header>
     </div>
@@ -86,7 +101,10 @@
           </div>
 
           <div class="slide">
-            <img src="assets/imgs/radiologia2.jpeg" alt="Cachorro sendo vacinado" />
+            <img
+              src="assets/imgs/radiologia2.jpeg"
+              alt="Cachorro sendo vacinado"
+            />
             <div class="text">
               <h1>Radiologia Veterinária</h1>
               <p>
@@ -177,7 +195,10 @@
         </div>
 
         <div class="servico-card">
-          <img src="assets/imgs/ultrassom.png" alt="Ícone de Ultrassonografia" />
+          <img
+            src="assets/imgs/ultrassom.png"
+            alt="Ícone de Ultrassonografia"
+          />
           <div class="card-text">
             <h3>Ultrassonografia.</h3>
             <p>
@@ -224,21 +245,23 @@
           Seja nosso parceiro e tenha acesso a exames de alta precisão e
           tecnologia de ponta!
         </p>
-
-
       </div>
     </section>
 
     <section class="parallax-section">
       <div class="parallax-content">
         <h1>Marque uma consulta hoje mesmo!</h1>
-        <p>Exames de alta precisão para garantir o bem-estar dos seus animais.</p>
-        <a  class="cta-button" target="_blank"
-        href="https://wa.me/552126422886?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site,%20poderia%20me%20ajudar?">Agendar Consulta</a>
-       
+        <p>
+          Exames de alta precisão para garantir o bem-estar dos seus animais.
+        </p>
+        <a
+          class="cta-button"
+          target="_blank"
+          href="https://wa.me/552126422886?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site,%20poderia%20me%20ajudar?"
+          >Agendar Consulta</a
+        >
       </div>
     </section>
-    
 
     <!-- Serviços -->
     <section id="servicos">
@@ -253,7 +276,10 @@
           </p>
         </div>
         <div class="servico-item">
-          <img src="assets/imgs/esperma-animal.png" alt="Ícone Reprodução Assistida" />
+          <img
+            src="assets/imgs/esperma-animal.png"
+            alt="Ícone Reprodução Assistida"
+          />
           <h3>Reprodução Assistida</h3>
           <p>
             Suporte especializado para reprodução animal, com inseminação
@@ -380,7 +406,6 @@
               <p>⭐ 4.8/5</p>
             </div>
             <p>"Profissionais incríveis, super atenciosos com meu gato!"</p>
-            <p>"Profissionais incríveis, super atenciosos com meu gato!"</p>
           </div>
         </div>
 
@@ -447,7 +472,10 @@
       <div class="container-aviso">
         <p>Visite nossas redes sociais</p>
         <div class="seta-animada">
-          <img src="assets/imgs/seta.png" alt="direcionando para redes sociais" />
+          <img
+            src="assets/imgs/seta.png"
+            alt="direcionando para redes sociais"
+          />
         </div>
       </div>
     </section>
@@ -457,19 +485,25 @@
       <div class="container-footer">
         <div class="redes-sociais">
           <a href="https://www.facebook.com/diagnosisvet/" target="_blank"
-            ><img src="assets/imgs/facebook.png" alt="link para facebook da cliníca"
+            ><img
+              src="assets/imgs/facebook.png"
+              alt="link para facebook da cliníca"
           /></a>
         </div>
         <div class="redes-sociais">
           <a href="https://www.instagram.com/diagnosis_vet" target="_blank"
-            ><img src="assets/imgs/instagram.png" alt="link para instagram da cliníca"
+            ><img
+              src="assets/imgs/instagram.png"
+              alt="link para instagram da cliníca"
           /></a>
         </div>
         <div class="redes-sociais">
           <a
             href="https://wa.me/552126422886?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site,%20poderia%20me%20ajudar?"
             target="_blank"
-            ><img src="assets/imgs/whatsapp.png" alt="link para whatsapp da cliníca"
+            ><img
+              src="assets/imgs/whatsapp.png"
+              alt="link para whatsapp da cliníca"
           /></a>
         </div>
       </div>
@@ -492,6 +526,5 @@
       </div>
     </footer>
     <script src="assets/js/script.js"></script>
-        
   </body>
 </html>
