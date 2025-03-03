@@ -1,125 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Diagnosis - Clínica Veterinária especializada em diagnóstico por imagem para pets."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato - Diagnosis Clínica Veterinária</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="stylesheet" href="../assets/css/styleContato.css">
-</head>
-<body>
-  <div class="header-container">
-    <!-- Header Superior com Contatos -->
-    <div id="top-header">
-      <div class="contact-info">
-        <div class="container-icon">
-          <img
-            class="icon"
-            src="../assets/imgs/telefone.png"
-            alt="telefone da cliníca"
-          />
-          (021) 2642 2886
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/styleContato.css" />
+  </head>
+  <body>
+    <div class="header-container">
+      <!-- Header Superior com Contatos -->
+      <div id="top-header">
+        <div class="contact-info">
+          <div class="container-icon">
+            <img
+              class="icon"
+              src="../assets/imgs/telefone.png"
+              alt="telefone da cliníca"
+            />
+            (021) 2642 2886
+          </div>
+          |
+          <div class="container-icon">
+            <img
+              class="icon"
+              src="../assets/imgs/sms.png"
+              alt="celular da cliníca"
+            />
+            (021) 986 062886
+          </div>
+          |
+          <div class="container-icon">
+            <img
+              class="icon"
+              src="../assets/imgs/o-email.png"
+              alt="celular da cliníca"
+            />
+            <a href="mailto:diagnosisvet@gmail.com">diagnosisvet@gmail.com</a>
+          </div>
         </div>
-        |
-        <div class="container-icon">
-          <img class="icon" src="../assets/imgs/sms.png" alt="celular da cliníca" />
-          (021) 986 062886
-        </div>
-        |
-        <div class="container-icon">
-          <img class="icon" src="../assets/imgs/o-email.png" alt="celular da cliníca" />
-          <a href="mailto:diagnosisvet@gmail.com">diagnosisvet@gmail.com</a>
+        <div class="partner-info">
+          <a href="#">TERRADIOLOGIA, SEJA NOSSO PARCEIRO</a>
         </div>
       </div>
-      <div class="partner-info">
-        <a href="#">TERRADIOLOGIA, SEJA NOSSO PARCEIRO</a>
-      </div>
-    </div>
-    <!-- Cabeçalho Principal -->
-    <header id="main-header">
-      <div class="container-menu">
-        <div class="logo">
-          <img
-            class="img-Logo"
-            src="../assets/imgs/logo-diagnosis.png"
-            alt="Veterinário cuidando de um pet"
-          />
-        </div>
+      <!-- Cabeçalho Principal -->
+      <header id="main-header">
+        <div class="container-menu">
+          <div class="logo">
+            <img
+              class="img-Logo"
+              src="../assets/imgs/logo-diagnosis.png"
+              alt="Veterinário cuidando de um pet"
+            />
+          </div>
 
-        <nav>
-          <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="../index.html#sobre">Sobre Nós</a></li>
-            <li><a href="../index.html#servicos">Serviços</a></li>
-            <li><a href="../index.html#equipe">Equipe</a></li>
-            <li><a href="contato.html" class="active">Contato</a></li>
-            <li><a href="#">Laudos</a></li>
-          </ul>
+          <nav>
+            <ul>
+              <li><a href="../index.html">Início</a></li>
+              <li><a href="../index.html#sobre">Sobre Nós</a></li>
+              <li><a href="../index.html#servicos">Serviços</a></li>
+              <li><a href="../index.html#equipe">Equipe</a></li>
+              <li><a href="contato.html" class="active">Contato</a></li>
+              <li><a href="#">Laudos</a></li>
+            </ul>
+            <!-- Botão do menu hambúrguer -->
+          </nav>
           <!-- Botão do menu hambúrguer -->
-        </nav>
-        <!-- Botão do menu hambúrguer -->
-        <input
-          type="checkbox"
-          id="menu-toggle"
-          class="menu"
-          role="button"
-          aria-label="Abrir o menu"
-          onkeydown="handleKeyPress(event)"
-        />
-      </div>
-    </header>
-  </div>
+          <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu"
+            role="button"
+            aria-label="Abrir o menu"
+            onkeydown="handleKeyPress(event)"
+          />
+        </div>
+      </header>
+    </div>
 
     <!-- Seção de Contato -->
     <section id="contato">
-        <h1>Entre em Contato</h1>
-        <p>Envie sua mensagem, responderemos o mais rápido possível!</p>
+      <h1>Entre em Contato</h1>
+      <p>Envie sua mensagem, responderemos o mais rápido possível!</p>
 
-        <form action="enviar.php" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+      <form action="enviar.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
 
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
+        <button type="submit">Enviar</button>
+      </form>
 
-        <div class="info-clinica">
-            <p>📍 Endereço: Av. Alberto Torres, 672 - Alto, Teresópolis - RJ</p>
-            <p>📞 Telefone: (21) 2642-2886</p>
-            <p>📧 E-mail: <a href="mailto:diagnosisvet@gmail.com">diagnosisvet@gmail.com</a></p>
-        </div>
+      <div class="info-clinica">
+        <p>📍 Endereço: Av. Alberto Torres, 672 - Alto, Teresópolis - RJ</p>
+        <p>📞 Telefone: (21) 2642-2886</p>
+        <p>
+          📧 E-mail:
+          <a href="mailto:diagnosisvet@gmail.com">diagnosisvet@gmail.com</a>
+        </p>
+      </div>
     </section>
 
-   <!-- Rodapé -->
+    <!-- Rodapé -->
     <footer>
       <div class="container-footer">
         <div class="redes-sociais">
           <a href="https://www.facebook.com/diagnosisvet/" target="_blank"
-            ><img src="../assets/imgs/facebook.png" alt="link para facebook da cliníca"
+            ><img
+              src="../assets/imgs/facebook.png"
+              alt="link para facebook da cliníca"
           /></a>
         </div>
         <div class="redes-sociais">
           <a href="https://www.instagram.com/diagnosis_vet" target="_blank"
-            ><img src="../assets/imgs/instagram.png" alt="link para instagram da cliníca"
+            ><img
+              src="../assets/imgs/instagram.png"
+              alt="link para instagram da cliníca"
           /></a>
         </div>
         <div class="redes-sociais">
           <a
             href="https://wa.me/552126422886?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site,%20poderia%20me%20ajudar?"
             target="_blank"
-            ><img src="../assets/imgs/whatsapp.png" alt="link para whatsapp da cliníca"
+            ><img
+              src="../assets/imgs/whatsapp.png"
+              alt="link para whatsapp da cliníca"
           /></a>
         </div>
       </div>
       <div class="container-footer-logo">
         <div class="logo-footer">
           <a href="#"
-            ><img src="../assets/imgs/logo-diagnosis.png" alt="retornar ao inicío"
+            ><img
+              src="../assets/imgs/logo-diagnosis.png"
+              alt="retornar ao inicío"
           /></a>
         </div>
       </div>
@@ -135,5 +159,5 @@
       </div>
     </footer>
     <script src="../assets/js/script2.js"></script>
-</body>
+  </body>
 </html>
