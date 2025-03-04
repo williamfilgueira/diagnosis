@@ -126,18 +126,18 @@ section {
 }
 
 nav ul li:nth-child(6) a {
-  background-color: #03a895;  
-  color: white; 
-  padding: 10px 15px; 
-  border-radius: 5px; 
-  font-weight: bold; 
+  background-color: #03a895;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
   transition: background-color 0.3s ease-in-out;
 }
 
 /* Efeito de hover para melhor experiência do usuário */
 nav ul li:nth-child(6) a:hover {
   background-color: #028577;
-  color: white; 
+  color: white;
 }
 
 nav ul {
@@ -215,7 +215,7 @@ nav ul li a:hover {
   width: clamp(250px, 50vw, 650px);
 }
 
-.text h1{
+.text h1 {
   margin-bottom: 20px;
   font-size: 2em;
 }
@@ -261,7 +261,7 @@ nav ul li a:hover {
 /* Estilos da seção de serviços */
 #servicos-especiais {
   text-align: center;
-  padding: 150px 20px;
+  padding: 100px 20px;
   background-color: #ffffff;
 }
 
@@ -282,7 +282,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
   background: #f9f9f9;
   border-radius: 8px;
@@ -307,9 +307,9 @@ nav ul li a:hover {
 .card-text {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
-  flex-grow: 0; 
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
   width: 100%;
 }
 
@@ -334,8 +334,30 @@ nav ul li a:hover {
   }
 
   .servico-card {
-    width: 90%; 
-    min-height: auto; 
+    width: 90%;
+    min-height: auto;
+  }
+}
+
+.cssanimation,
+.cssanimation span {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.cssanimation span {
+  display: inline-block;
+}
+
+.effect3d {
+  animation-name: effect3d;
+}
+@keyframes effect3d {
+  to {
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+      0 5px 0 #aaa, 0 6px 1px #00796b, 0 0 5px #00796b, 0 1px 3px #00796b,
+      0 3px 5px #00796b, 0 5px 10px #00796b, 0 10px 10px #00796b,
+      0 20px 20px #00796b;
   }
 }
 
@@ -350,7 +372,7 @@ nav ul li a:hover {
   justify-content: center;
   text-align: center;
   color: white;
-  background: url('../imgs/entrada2.jpeg') no-repeat center center;
+  background: url("../imgs/entrada.jpeg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed; /* Aqui está o efeito parallax */
 }
@@ -364,7 +386,11 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   padding: 50px;
-  background: linear-gradient(180deg, #04b49fa9, #204d47ab); /* Leve fundo escuro para melhorar a legibilidade */
+  background: linear-gradient(
+    180deg,
+    #04b49fa9,
+    #204d47ab
+  ); /* Leve fundo escuro para melhorar a legibilidade */
 }
 
 /* Título e Texto */
@@ -395,7 +421,6 @@ nav ul li a:hover {
 .cta-button:hover {
   background: #03463e;
 }
-
 
 /* Sobre a clínica */
 #sobre {
@@ -459,7 +484,7 @@ nav ul li a:hover {
 
 #servicos {
   text-align: center;
-  padding: 150px 5%;
+  padding: 100px 5%;
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -471,10 +496,9 @@ nav ul li a:hover {
   font-size: 2em;
 }
 
-.container-title-servicos-especiais{
+.container-title-servicos-especiais {
   margin-bottom: 20px;
 }
-
 
 /* Layout Responsivo com Flexbox */
 .servicos-grid {
@@ -551,7 +575,7 @@ h2 {
 /* Equipe */
 #equipe {
   text-align: center;
-  padding: 150px 1%;
+  padding: 100px 1%;
   background: linear-gradient(180deg, #03a895, #204d47);
 }
 
@@ -703,7 +727,6 @@ h2 {
   margin-bottom: 50px;
 }
 
-
 #depoimentos h2 {
   font-size: 2em;
   color: #00796b;
@@ -761,7 +784,6 @@ h2 {
   object-fit: fill;
   border: 3px solid white;
 }
-
 
 /* mapa */
 .mapa-container {
@@ -974,8 +996,6 @@ footer {
   nav ul li {
     display: inline-block;
   }
-
-  
 }
 
 /* Exibe o menu hambúrguer e oculta o tradicional no mobile */
