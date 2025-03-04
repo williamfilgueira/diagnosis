@@ -75,13 +75,12 @@ header {
   transition: all 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
-/* CONTAINER DA LOGO E MENU HAMBÚRGUER
-.container-menu-hamburguer {
-  display: flex !important; 
-  align-items: center !important;
-  justify-content: space-between !important;
-  width: 100% !important;
-} */
+.scrolly-disable {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: flex !important;
+}
+
 
 /* Quando a página é rolada, a navbar diminui */
 .scrolled header {
