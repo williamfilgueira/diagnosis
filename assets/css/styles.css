@@ -1112,3 +1112,27 @@ footer {
   outline: 2px solid var(--c);
   outline-offset: 5px;
 }
+
+
+/* ANIMAÇÕES */
+
+.servico-card {
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Cards que vão vir da esquerda */
+.servico-card.left {
+  transform: translateX(-100px);
+}
+
+/* Cards que vão vir da direita */
+.servico-card.right {
+  transform: translateX(100px);
+}
+
+/* Quando o card entrar na tela */
+.servico-card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
