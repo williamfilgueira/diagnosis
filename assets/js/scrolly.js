@@ -634,7 +634,14 @@
     // hide the element and style remove which is not in active window
     this.clearStyle = function(elmIndex) {
         var isCharacterAnimate = selector[elmIndex].getAttribute(settingOptions.dataCharacterAnimate);
-        selector[elmIndex].style.cssText = hiddenCss;
+        
+        // Verifica se o elemento é o menu ou uma parte do menu
+        if (!selector[elmIndex].classList.contains("menu") && 
+            !selector[elmIndex].classList.contains("nav") && 
+            !selector[elmIndex].id.includes("menu")) {
+            selector[elmIndex].style.cssText = hiddenCss;
+        }
+    
         if (isCharacterAnimate) {
             selector[elmIndex].className = 'scrolly ' + animationClassMap[elmIndex];
         }
