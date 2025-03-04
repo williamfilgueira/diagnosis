@@ -9,7 +9,11 @@
     />
     <title>Diagnosis - Clínica Veterinária</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.1.0/css/cssanimation.min.css">
+    <link href="assets/css/cssanimation/cssanimation.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/css/cssanimation/cssanimation.min.css"
+    />
   </head>
   <body>
     <div class="header-container">
@@ -155,7 +159,11 @@
         <h2>Nossos Serviços Especializados</h2>
       </div>
       <div class="servicos-container">
-        <div class="servico-card">
+        <div
+          class="servico-card"
+          data-scrolly-top="blurInLeft"
+          data-scrolly-down="blurInRight"
+        >
           <img src="assets/imgs/radiacao.png" alt="Ícone de Radiologia" />
           <div class="card-text">
             <h3>Radiologia.</h3>
@@ -166,7 +174,11 @@
           </div>
         </div>
 
-        <div class="servico-card">
+        <div
+          class="servico-card"
+          data-scrolly-top="blurInBottom"
+          data-scrolly-down="blurInBottom"
+        >
           <img
             src="assets/imgs/esperma-animal.png"
             alt="Ícone de Reprodução Assistida"
@@ -180,7 +192,11 @@
           </div>
         </div>
 
-        <div class="servico-card">
+        <div
+          class="servico-card"
+          data-scrolly-top="blurInLeft"
+          data-scrolly-down="blurInLeft"
+        >
           <img src="assets/imgs/cancer.png" alt="Ícone de Oncologia" />
           <div class="card-text">
             <h3>Oncologia.</h3>
@@ -188,7 +204,11 @@
           </div>
         </div>
 
-        <div class="servico-card">
+        <div
+          class="servico-card"
+          data-scrolly-top="blurInLeft"
+          data-scrolly-down="blurInRight"
+        >
           <img src="assets/imgs/cardiologia.png" alt="Ícone de Cardiologia" />
           <div class="card-text">
             <h3>Cardiologia.</h3>
@@ -196,7 +216,11 @@
           </div>
         </div>
 
-        <div class="servico-card">
+        <div
+          class="servico-card"
+          data-scrolly-top="blurInTop"
+          data-scrolly-down="blurInTop"
+        >
           <img
             src="assets/imgs/ultrassom.png"
             alt="Ícone de Ultrassonografia"
@@ -210,7 +234,11 @@
           </div>
         </div>
 
-        <div class="servico-card">
+        <div
+          class="servico-card"
+          data-scrolly-top="blurInLeft"
+          data-scrolly-down="blurInLeft"
+        >
           <img src="assets/imgs/endoscopia.png" alt="Ícone de Endoscopia" />
           <div class="card-text">
             <h3>Endoscopia.</h3>
@@ -332,7 +360,11 @@
       </p>
 
       <div class="equipe-container">
-        <div class="equipe-item">
+        <div
+          class="equipe-item"
+          data-scrolly-top="blurInLeft"
+          data-scrolly-down="blurInRight"
+        >
           <img
             src="assets/imgs/marceline.jpeg"
             alt="Profissional da equipe veterinária"
@@ -344,7 +376,12 @@
           </p>
         </div>
 
-        <div class="equipe-item">
+        <div
+          class="equipe-item"
+          data-scrolly-top="moveFromBottom, direction:alternate"
+          data-scrolly-top="blurInBottom"
+          data-scrolly-down="blurInTop"
+        >
           <img
             src="assets/imgs/lais-e-.jpeg"
             alt="Profissional da equipe veterinária"
@@ -356,7 +393,11 @@
           </p>
         </div>
 
-        <div class="equipe-item">
+        <div
+          class="equipe-item"
+          data-scrolly-top="blurInLeft"
+          data-scrolly-down="blurInLeft"
+        >
           <img
             src="assets/imgs/equipe.jpeg"
             alt="Profissional da equipe veterinária"
@@ -371,7 +412,11 @@
     </section>
 
     <!-- Depoimentos -->
-    <section id="depoimentos">
+    <section
+      id="depoimentos"
+      data-scrolly-top="blurInBottom"
+      data-scrolly-down="blurInTop"
+    >
       <h2>O que nossos clientes dizem</h2>
 
       <!-- Depoimentos do Google -->
@@ -472,7 +517,11 @@
       </div>
     </section>
 
-    <section id="aviso">
+    <section
+      id="aviso"
+      data-scrolly-top="blurInBottom"
+      data-scrolly-down="blurInTop"
+    >
       <div class="container-aviso">
         <p>Visite nossas redes sociais</p>
         <div class="seta-animada">
@@ -530,6 +579,15 @@
       </div>
     </footer>
     <script src="assets/js/script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/yesiamrocks/cssanimation.io@1.0.3/letteranimation.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/scrolly.js"></script>
+    <script>
+      window.onload = function () {
+        scrolly();
+      };
+    </script>
   </body>
 </html>
