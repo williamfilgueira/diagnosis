@@ -81,7 +81,6 @@ header {
   display: flex !important;
 }
 
-
 /* Quando a página é rolada, a navbar diminui */
 .scrolled header {
   position: fixed;
@@ -337,7 +336,6 @@ nav ul li a:hover {
     min-height: auto;
   }
 }
-
 
 /* Configuração geral da seção */
 .parallax-section {
@@ -1017,6 +1015,11 @@ footer {
   }
   section {
     scroll-margin-top: 79px;
+  }
+
+  nav ul.active {
+    display: flex !important; /* Garante que ele seja visível */
+    flex-direction: column;
   }
 }
 @media (max-width: 557px) {
