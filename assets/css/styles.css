@@ -289,8 +289,7 @@ nav ul li a:hover {
   max-width: 350px;
   min-height: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-  opacity: 0;
+  transition: transform 0.3s ease;
 }
 
 .servico-card:hover {
@@ -595,15 +594,12 @@ h2 {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  /* transition: transform 0.3s ease-in-out; */
+  transition: transform 0.3s ease-in-out;
   text-align: center;
   width: clamp(250px, 30%, 420px);
   position: relative;
   overflow: hidden;
   color: #00796b;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .equipe-item h3 {
@@ -819,7 +815,7 @@ h2 {
 /* Seta animada */
 .seta-animada {
   position: absolute;
-  bottom: -100px;
+  bottom: -130px;
   left: calc(50% - 60px);
   animation: pulo 1s infinite ease-in-out;
 }
@@ -1000,9 +996,9 @@ footer {
     width: 100%;
     background: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /* padding: 15px 0; */
+    padding: 15px 0;
     text-align: center;
-    margin-top: 13px;
+    margin-top: 10px;
   }
 
   /* Exibe o menu quando o input checkbox está marcado */
@@ -1118,46 +1114,69 @@ footer {
 }
 
 /* ANIMAÇÕES */
-/* Definições padrão para todos os cards */
-.servico-card,
-.servico-item {
+
+/* Estado inicial: invisível e deslocado para baixo */
+.servico-card {
   opacity: 0;
+  transform: translateY(100px);
   transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-/* Animação para os elementos vindos da esquerda */
-.servico-card.left,
-.servico-item.left {
-  transform: translateX(-100px);
+/* Quando o card entra na tela, ele aparece e sobe */
+.servico-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Animação para os elementos vindos da direita */
-.servico-card.right,
-.servico-item.right {
-  transform: translateX(100px);
+/* Estado inicial: invisível e deslocado para baixo */
+.servico-item {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-/* Quando os elementos entram na tela */
-.servico-card.show,
+/* Quando o card entra na tela, ele aparece e sobe */
 .servico-item.show {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
-/* Quando o card entra na tela */
+/* Estado inicial: invisível e deslocado para baixo */
+.equipe-item {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Quando o card entra na tela, ele aparece e sobe */
 .equipe-item.show {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Estado inicial: invisível e deslocado para baixo */
 .review-circle {
   opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-/* Quando a imagem entra na tela */
+/* Quando a imagem entra na tela, ela aparece e sobe */
 .review-circle.show {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0);
 }
+
+/* Estado inicial: invisível e deslocado para baixo */
+.container-aviso {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Quando a seção entra na tela, ela aparece e sobe */
+.container-aviso.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
