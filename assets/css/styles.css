@@ -77,10 +77,10 @@ header {
 
 /* CONTAINER DA LOGO E MENU HAMBÚRGUER */
 .container-menu-hamburguer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  display: flex !important; 
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
 }
 
 /* Quando a página é rolada, a navbar diminui */
