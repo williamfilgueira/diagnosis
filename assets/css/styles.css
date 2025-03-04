@@ -339,27 +339,6 @@ nav ul li a:hover {
   }
 }
 
-.cssanimation,
-.cssanimation span {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.cssanimation span {
-  display: inline-block;
-}
-
-.effect3d {
-  animation-name: effect3d;
-}
-@keyframes effect3d {
-  to {
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
-      0 5px 0 #aaa, 0 6px 1px #00796b, 0 0 5px #00796b, 0 1px 3px #00796b,
-      0 3px 5px #00796b, 0 5px 10px #00796b, 0 10px 10px #00796b,
-      0 20px 20px #00796b;
-  }
-}
 
 /* Configuração geral da seção */
 .parallax-section {
@@ -716,7 +695,7 @@ h2 {
 }
 
 #depoimentos {
-  padding: 150px 5%;
+  padding: 100px 5%;
   text-align: center;
   background: #f5f5f5;
 }
