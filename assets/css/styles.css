@@ -471,10 +471,6 @@ nav ul li a:hover {
   }
 }
 
-
-
-
-
 .container-sobre p {
   font-size: clamp(20px, 3vw, 22px);
 }
@@ -643,12 +639,14 @@ h2 {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
   text-align: center;
-  width: clamp(250px, 30%, 420px);
+  width: clamp(350px, 40%, 420px);
   position: relative;
   overflow: hidden;
   color: #00796b;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .equipe-item h3 {
@@ -1185,11 +1183,6 @@ footer {
 }
 
 /* Estado inicial: invisível e deslocado para baixo */
-.equipe-item {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-}
 
 /* Quando o card entra na tela, ele aparece e sobe */
 .equipe-item.show {
@@ -1222,4 +1215,3 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-
