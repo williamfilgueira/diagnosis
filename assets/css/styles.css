@@ -1032,7 +1032,7 @@ footer {
     display: none; /* Esconde o menu tradicional */
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: #fff;
@@ -1214,4 +1214,36 @@ footer {
 .container-aviso.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* botão whatsapp */
+.container-botao{
+  background-color: red;
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-button.show {
+  opacity: 1;
+  transform: scale(1);
 }

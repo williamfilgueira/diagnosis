@@ -114,3 +114,23 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkAllSections);
   checkAllSections(); // Ativa elementos já visíveis ao carregar a página
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappButton = document.getElementById("whatsappButton");
+  const heroSection = document.getElementById("inicio");
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+              whatsappButton.classList.add("show");
+          } else {
+              whatsappButton.classList.remove("show");
+          }
+      });
+  }, { threshold: 0.0001 }); // Quando apenas 10% da seção hero estiver visível
+
+  observer.observe(heroSection);
+});
+
+
+
