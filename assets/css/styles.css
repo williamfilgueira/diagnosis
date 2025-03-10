@@ -1073,13 +1073,13 @@ footer {
 @media (max-width: 540px) {
   .container-sobre {
     flex-wrap: wrap;
+    justify-content: center
   }
 
   .servico-card,
   h3,
   p {
     display: flex;
-    gap: 20px;
     flex-direction: column;
     align-items: center;
     text-align: center;
