@@ -119,18 +119,50 @@ document.addEventListener("DOMContentLoaded", function () {
   const whatsappButton = document.getElementById("whatsappButton");
   const heroSection = document.getElementById("inicio");
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver(
+    (entries) => {
       entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-              whatsappButton.classList.add("show");
-          } else {
-              whatsappButton.classList.remove("show");
-          }
+        if (!entry.isIntersecting) {
+          whatsappButton.classList.add("show");
+        } else {
+          whatsappButton.classList.remove("show");
+        }
       });
-  }, { threshold: 0.0001 }); // Quando apenas 10% da seção hero estiver visível
+    },
+    { threshold: 0.0001 }
+  ); // Quando apenas 10% da seção hero estiver visível
 
   observer.observe(heroSection);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappButton = document.getElementById("whatsappButton");
+  const heroSection = document.getElementById("inicio");
 
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+              whatsappButton.classList.add("show");
+              vibrateButton(); // Faz vibrar assim que aparece
+          } else {
+              whatsappButton.classList.remove("show");
+          }
+      });
+  }, { threshold: 0.1 });
 
+  observer.observe(heroSection);
+
+  function vibrateButton() {
+      whatsappButton.classList.add("vibrate");
+      setTimeout(() => {
+          whatsappButton.classList.remove("vibrate");
+      }, 3000); // Remove a classe após a animação (0.3s)
+  }
+
+  // Configura a vibração a cada 7 segundos, mas apenas se o botão estiver visível
+  setInterval(() => {
+      if (whatsappButton.classList.contains("show")) {
+          vibrateButton();
+      }
+  }, 4000);
+});
