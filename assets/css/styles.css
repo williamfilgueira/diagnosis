@@ -289,7 +289,9 @@ nav ul li a:hover {
   max-width: 350px;
   min-height: 250px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .servico-card:hover {
@@ -537,11 +539,13 @@ nav ul li a:hover {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
   text-align: center;
   width: calc(25% - 30px);
   max-width: 300px;
   min-width: 250px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 /* Ícones */
@@ -791,7 +795,9 @@ h2 {
   justify-content: center;
   margin: 0 auto 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 .review-img {
@@ -829,11 +835,6 @@ h2 {
   font-weight: bold;
   color: #00796b;
   margin-bottom: 20px;
-}
-
-.mapa {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .container-aviso p {
@@ -1073,7 +1074,7 @@ footer {
 @media (max-width: 540px) {
   .container-sobre {
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
   }
 
   .servico-card,
@@ -1156,24 +1157,10 @@ footer {
 
 /* ANIMAÇÕES */
 
-/* Estado inicial: invisível e deslocado para baixo */
-.servico-card {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-}
-
 /* Quando o card entra na tela, ele aparece e sobe */
 .servico-card.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Estado inicial: invisível e deslocado para baixo */
-.servico-item {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 /* Quando o card entra na tela, ele aparece e sobe */
@@ -1188,13 +1175,6 @@ footer {
 .equipe-item.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Estado inicial: invisível e deslocado para baixo */
-.review-circle {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 /* Quando a imagem entra na tela, ela aparece e sobe */
@@ -1216,18 +1196,15 @@ footer {
   transform: translateY(0);
 }
 
-
 /* botão whatsapp */
-.container-botao{
-  background-color: red;
-}
+
 .whatsapp-button {
   position: fixed;
-  bottom:100px;
+  bottom: 100px;
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: #25D366;
+  background-color: #25d366;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1250,12 +1227,24 @@ footer {
 }
 
 @keyframes vibrate {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(-2px); }
-  40% { transform: translateX(2px); }
-  60% { transform: translateX(-2px); }
-  80% { transform: translateX(2px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-2px);
+  }
+  40% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .whatsapp-button.vibrate {

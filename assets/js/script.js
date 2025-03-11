@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", checkAllSections);
-  checkAllSections(); // Ativa elementos já visíveis ao carregar a página
+  checkAllSections(); 
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     { threshold: 0.0001 }
-  ); // Quando apenas 10% da seção hero estiver visível
+  );
 
   observer.observe(heroSection);
 });
