@@ -8,7 +8,9 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diagnosis Veterinária - Especialista em Diagnóstico por Imagem para Pets</title>
+    <title>
+      Diagnosis Veterinária - Especialista em Diagnóstico por Imagem para Pets
+    </title>
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/styleContato.css" />
   </head>
@@ -17,7 +19,6 @@
       <!-- Header Superior com Contatos -->
       <div id="top-header">
         <div class="contact-info">
-          
           <div class="container-icon">
             <img
               class="icon"
@@ -44,11 +45,13 @@
       <header id="main-header">
         <div class="container-menu">
           <div class="logo">
-            <img
-              class="img-Logo"
-              src="../assets/imgs/logo-diagnosis.png"
-              alt="Veterinário cuidando de um pet"
-            />
+            <a href="../index.html">
+              <img
+                class="img-Logo"
+                src="../assets/imgs/logo-diagnosis.png"
+                alt="Veterinário cuidando de um pet"
+              />
+            </a>
           </div>
 
           <nav>
@@ -58,7 +61,7 @@
               <li><a href="../index.html#servicos">Serviços</a></li>
               <li><a href="../index.html#equipe">Equipe</a></li>
               <li><a href="contato.html" class="active">Contato</a></li>
-              <li><a href="#">Laudos</a></li>
+              <li><a href="https://diagnosis.asl.med.br/diagnosisvet/portal/#/" target="_blank">Laudos</a></li>
             </ul>
             <!-- Botão do menu hambúrguer -->
           </nav>
@@ -76,22 +79,47 @@
     </div>
 
     <!-- Seção de Contato -->
-    <section id="contato">
-      <h1>Entre em Contato</h1>
-      <p>Envie sua mensagem, responderemos o mais rápido possível!</p>
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato-visual">
+      <h2 class="title">Fale Conosco</h2>
+      <p class="sub-title">
+        Escolha a forma de contato que preferir, será um prazer falar com você!
+      </p>
 
-      <form action="enviar.php" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
+      <div class="opcoes-contato">
+        <!-- Contato por E-mail -->
+        <div class="card-contato">
+          <img
+            src="../assets/imgs/o-email.png"
+            alt="Ícone de e-mail"
+            class="icon-contato"
+          />
+          <h2>Envie um E-mail</h2>
+          <p>Se quiser mais informações ou se tornar parceiro:</p>
+          <a
+            href="mailto:diagnosisvet@gmail.com?subject=Parceria&body=Olá, gostaria de me tornar parceiro, gostaria de mais informações :D"
+            class="botao-contato"
+            >Enviar E-mail</a
+          >
+        </div>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+        <!-- Contato por WhatsApp -->
+        <div class="card-contato">
+          <img
+            src="../assets/imgs/whatsapp.png"
+            alt="Ícone do WhatsApp"
+            class="icon-contato"
+          />
+          <h2>Atendimento Rápido</h2>
+          <p>Prefere falar agora? Mande uma mensagem no WhatsApp:</p>
+          <a
+            href="https://wa.me/552126422886?text=Oi,%20estou%20entrando%20em%20contato%20pelo%20site,%20poderia%20me%20ajudar?"
+            class="botao-contato"
+            target="_blank"
+            >Chamar no WhatsApp</a
+          >
+        </div>
+      </div>
 
       <div class="info-clinica">
         <p>📍 Endereço: Av. Alberto Torres, 672 - Alto, Teresópolis - RJ</p>

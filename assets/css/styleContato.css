@@ -1,144 +1,82 @@
-
-/* Estilo Geral da Seção de Contato */
-#contato {
+.contato-visual {
   text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(180deg, #03a895, #204d47);
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 50px auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 190px;
-  height: 100%;
+  padding: 60px 20px;
+  margin-top: 150px;
 }
 
-/* Título da Seção */
-#contato h1 {
-  font-size: 28px;
-  color: white;
-  margin-bottom: 10px;
+.contato-visual,
+p {
+  color: #009688;
 }
 
-/* Texto de Introdução */
-#contato p {
-  font-size: 16px;
-  color: white;
-  margin-bottom: 20px;
+.title {
+  color: #009688;
 }
 
-/* Formulário Responsivo */
-#contato form {
+.sub-title {
+  color: #009688;
+}
+
+.contato-visual img {
+  width: 40px;
+}
+
+.card-contato,
+h2,
+p,
+a {
+  color: #fff;
+}
+
+.opcoes-contato {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
 
-/* Labels */
-#contato label {
-  font-weight: bold;
-  font-size: 14px;
-  color: #444;
-  text-align: left;
+.card-contato {
+  background: #009688;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-/* Campos de Input e Textarea */
-#contato input,
-#contato textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.3s ease-in-out;
+.card-contato:hover {
+  transform: translateY(-5px);
 }
 
-/* Foco nos Inputs */
-#contato input:focus,
-#contato textarea:focus {
-  border: 1px solid #0077cc;
-  box-shadow: 0px 0px 5px rgba(0, 119, 204, 0.5);
+.icon-contato {
+  width: 64px;
+  margin-bottom: 15px;
 }
 
-/* Botão de Envio */
-#contato button {
-  background: linear-gradient(180deg, #03a895, #204d47);
-  color: white;
-  border: none;
-  padding: 14px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s, transform 0.2s;
-}
-
-#contato button:hover {
-  background: #03a895;
-  transform: scale(1.03);
-}
-
-/* Informações da Clínica */
-.info-clinica {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #333;
-}
-
-.info-clinica p {
-  margin: 5px 0;
-}
-
-/* Link de E-mail */
-.info-clinica a {
-  color: #03a895;
+.botao-contato {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #2ecc71;
+  color: #fff;
   text-decoration: none;
+  border-radius: 8px;
   font-weight: bold;
+  transition: background 0.2s ease;
 }
 
-.info-clinica a:hover {
-  text-decoration: underline;
+.botao-contato:hover {
+  background-color: #27ae60;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  #contato {
-      padding: 30px 15px;
-  }
-
-  #contato h1 {
-      font-size: 24px;
-  }
-
-  #contato form {
-      max-width: 90%;
-      padding: 15px;
-  }
-
-  #contato button {
-      font-size: 14px;
-      padding: 12px;
-  }
+.info-clinica {
+  margin-top: 50px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #009688;
 }
-
-@media (max-width: 480px) {
-  #contato h1 {
-      font-size: 22px;
-  }
-
-  #contato form {
-      max-width: 100%;
-      padding: 10px;
-  }
-
-  #contato button {
-      font-size: 14px;
-      padding: 10px;
-  }
+.info-clinica
+p,a {
+  color: #009688;
 }
